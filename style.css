@@ -22,12 +22,13 @@ button {
   background: none;
 }
 
-.container {
+.cont {
   overflow: hidden;
   position: relative;
   width: 900px;
   height: 550px;
   background: #fff;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .form {
@@ -38,7 +39,7 @@ button {
   transition: transform 1.2s ease-in-out;
 }
 
-.form h2 {
+h2 {
   width: 100%;
   font-size: 30px;
   text-align: center;
@@ -47,7 +48,7 @@ button {
 label {
   display: block;
   width: 260px;
-  margin: 25px auto;
+  margin: 25px auto 0;
   text-align: center;
 }
 
@@ -64,7 +65,7 @@ input {
   margin-top: 5px;
   font-size: 16px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #6d5d5d66;
+  border-bottom: 1px solid rgba(109, 93, 93, 0.4);
   text-align: center;
 }
 
@@ -81,9 +82,10 @@ button {
 
 .submit {
   margin-top: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: "Nunito", sans-serif;
   background: -webkit-linear-gradient(left, #7579ff, #b224ef);
 }
 
@@ -100,7 +102,6 @@ button {
 .btn span {
   font-weight: 600;
 }
-
 .sub-cont {
   overflow: hidden;
   position: absolute;
@@ -113,7 +114,7 @@ button {
   transition: transform 1.2s ease-in-out;
 }
 
-.container.s-signup .sub-cont {
+.cont.s-signup .sub-cont {
   transform: translate3d(-640px, 0, 0);
 }
 
@@ -135,7 +136,7 @@ button {
   top: 0;
   width: 900px;
   height: 100%;
-  background-image: url(./red-bridge.jpg);
+  background-image: url(red-bridge.jpg);
   background-size: cover;
   transition: transform 1.2s ease-in-out;
 }
@@ -150,7 +151,7 @@ button {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.container .s-signup .img:before {
+.cont.s-signup .img:before {
   transform: translate3d(640px, 0, 0);
 }
 
@@ -162,6 +163,7 @@ button {
   width: 100%;
   padding: 0 20px;
   text-align: center;
+  color: #fff;
   transition: transform 1.2s ease-in-out;
 }
 
@@ -175,7 +177,7 @@ button {
   line-height: 1.5;
 }
 
-.container.s-signup .img-text.m-up {
+.cont.s-signup .img-text.m-up {
   transform: translateX(520px);
 }
 
@@ -183,17 +185,16 @@ button {
   transform: translateX(-520px);
 }
 
-.container.s-signup .img-text.m-in {
+.cont.s-signup .img-text.m-in {
   transform: translateX(0);
 }
 
-
 .sign-in {
   padding-top: 65px;
-  transition: transform 1.2s ease-in-out;
+  transition-timing-function: ease-out;
 }
 
-.container .s-signup .sign-in {
+.cont.s-signup .sign-in {
   transition-timing-function: ease-in-out;
   transition-duration: 1.2s;
   transform: translate3d(640px, 0, 0);
@@ -229,7 +230,9 @@ button {
   position: absolute;
   left: 0;
   top: 0;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -237,18 +240,22 @@ button {
   transition: transform 1.2s;
 }
 
-.img-btn span.in {
+.img-btn span.m-in {
   transform: translateY(-72px);
 }
 
-.img-btn span.in {
+.cont.s-signup .img-btn span.m-in {
   transform: translateY(0);
+}
+
+.cont.s-signup .img-btn span.m-up {
+  transform: translateY(72px);
 }
 
 .sign-up {
   transform: translate3d(-900px, 0, 0);
 }
 
-.sub-cont .s-signup .sign-up {
+.cont.s-signup .sign-up {
   transform: translate3d(0, 0, 0);
 }

@@ -1,5 +1,3 @@
-let btn = document.querySelector('.img-btn');
-
-btn.addEventListener('click', () => {
-    document.querySelector('.container').classList.toggle('s-signup');
-})
+document.querySelector(".img-btn").addEventListener("click", function () {
+  document.querySelector(".cont").classList.toggle("s-signup");
+});
